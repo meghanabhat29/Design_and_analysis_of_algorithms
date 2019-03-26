@@ -4,7 +4,7 @@
 void merge(int a[],int low,int mid,int high)
 {
     int i=low,j=mid+1,k=0;
-    int c[low+high-1];
+    int c[low+high];
     while(i<=mid && j<=high)
     {
         if(a[i]<=a[j])
