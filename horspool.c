@@ -48,7 +48,7 @@ void main()
     int r;
     r=horspool(t,p);
     if(r==-1)
-    printf("the pattern is not found\n");
+    printf("The pattern is not found\n");
     else
     {
         printf("The pattern is found at position %d",r+1);
