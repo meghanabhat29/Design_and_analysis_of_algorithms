@@ -65,5 +65,5 @@ void main()
     }
     end=clock();
     total=(double)(end-start)/CLOCKS_PER_SEC;
-    printf("\nThe total time taken = %lf seconds");
+    printf("\nThe total time taken = %lf seconds",total);
 }
