@@ -1,0 +1,62 @@
+#include <cs50.h>
+#include <stdio.h>
+int p;
+void yes(void);
+void no(void);
+void pyramid(int n);
+int main(void)
+{
+    p=get_int("Enter the height of the pyramid(between 1 and 8) : ");
+    
+        if(p>=1 && p<=8)
+        {
+            yes();
+            
+        }
+        else
+        {
+            printf("\nHeight : %i\n",p);
+           no();
+        }
+    
+}
+void yes(void)
+{
+        printf("\nHeight : %i\n",p);
+        pyramid(p);
+    exit(0);
+}
+void no(void)
+{
+    scanf("%i",&p);
+   while(p<1 || p>8)
+   {
+        printf("Height : %i\n",p);
+         no();
+   }
+    yes();
+    
+}
+void pyramid(int n)
+{
+    int r,c1,c2,c3,c;
+    c=n-1;
+    for(r=1;r<=n;r++)
+    {
+        for(c1=1;c1<=c;c1++)
+        {
+            printf(" ");
+        }
+        c--;
+        for(c2=1;c2<=r;c2++)
+        {
+            printf("#");
+        }
+        printf("  ");
+        for(c3=1;c3<=r;c3++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
